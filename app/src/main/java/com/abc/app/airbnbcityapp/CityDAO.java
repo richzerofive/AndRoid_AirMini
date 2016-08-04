@@ -64,7 +64,7 @@ public class CityDAO extends SQLiteOpenHelper{
         Log.d("======insert 진입=====","123");
         String sql = "insert into "+TABLE_NAME
                 +String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, ",address,explain,price,facilities,house_type,photo,room,toilet,bed,count)
-                +String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
+                +String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d', );"
                 ,bean.getAddress()
                 ,bean.getExplain()
                 ,bean.getPrice()

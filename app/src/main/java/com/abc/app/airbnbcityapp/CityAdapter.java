@@ -15,15 +15,15 @@ public class CityAdapter extends BaseAdapter{
     LayoutInflater inflater;
 
     int[] imgs={
-            R.drawable.cupcake,
-            R.drawable.donut,
-            R.drawable.eclair,
-            R.drawable.froyo,
-            R.drawable.honeycomb,
-            R.drawable.icecream,
-            R.drawable.jellybean,
-            R.drawable.kitkat,
-            R.drawable.lollipop
+            R.drawable.host15,
+            R.drawable.host16,
+            R.drawable.host13,
+            R.drawable.host14,
+            R.drawable.host17,
+            R.drawable.host18,
+            R.drawable.host19,
+            R.drawable.host20l,
+            R.drawable.host12
     };
 
     public CityAdapter(Context context, ArrayList<CityBean>list) {

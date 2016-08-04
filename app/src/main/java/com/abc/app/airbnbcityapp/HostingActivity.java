@@ -55,7 +55,7 @@ public class HostingActivity extends Activity implements View.OnClickListener{
                 startActivity(new Intent(this,HomeActivity.class));
                 break;
             case R.id.bt_reset:
-                startActivity(new Intent(this,CityListActivity.class));
+                startActivity(new Intent(this,HomeActivity.class));
                 break;
         }
     }

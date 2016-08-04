@@ -6,7 +6,33 @@ package com.abc.app.airbnbcityapp;
 public class CityBean {
 
     private int room,toilet,bed,count;
-    private String address,explain,price,facilities,houseType,photo,id,pw;
+    private String address;
+    private String explain;
+
+    public String getCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(String checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public String getCheckOut() {
+        return checkOut;
+    }
+
+    public void setCheckOut(String checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    private String price;
+    private String facilities;
+    private String houseType;
+    private String photo;
+    private String id;
+    private String checkIn;
+    private String checkOut;
+    private String pw;
 
     public int getRoom() {
         return room;

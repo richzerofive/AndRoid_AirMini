@@ -24,10 +24,13 @@ public class CityDAO extends SQLiteOpenHelper {
     public static final String bed = "bed";
     public static final String count = "count";
     public static final String id = "id";
+    public static final String checkIn = "checkIn";
+    public static final String checkOut = "checkOut";
 
     public CityDAO(Context context) {
 
-        super(context, "park1", null, 1);
+        super(context, "park5", null, 1);
+        Log.d("DB 생성 체크", "======================여기가지 집입");
         this.getWritableDatabase();
     }
 
@@ -47,9 +50,12 @@ public class CityDAO extends SQLiteOpenHelper {
                 + toilet + " integer, "
                 + bed + " integer, "
                 + count + " integer, "
-                + id + " text );";
+                + id + " text, "
+                + checkIn + " text, "
+                + checkOut + " text );";
 
         db.execSQL(sql);
+        Log.d("DB 생성 table 체크", "======================여기가지 집입");
     }
 
 

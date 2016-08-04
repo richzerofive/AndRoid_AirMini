@@ -14,6 +14,7 @@ public interface CityService {
     public void logOut(CityBean mBean);
     public CityBean getSession();
     public int count();
+    public void book(CityBean bean);
     public ArrayList<CityBean> list();
     public List<CityBean> findBy(String word);
 

@@ -41,19 +41,19 @@ public class HomeActivity extends Activity implements View.OnClickListener{
                 startActivity(new Intent(this, CityListActivity.class));;
                 break;
             case R.id.bt_book :
-                startActivity(new Intent(this,/*BookingActivity*/MainActivity.class));
+                startActivity(new Intent(this,/*BookingActivity*/BookActivity.class));
                 break;
             case R.id.bt_book_list :
-                startActivity(new Intent(this,/*BookListActivity*/MainActivity.class));
+                startActivity(new Intent(this,/*BookListActivity*/BookListActivity.class));
                 break;
             case R.id.bt_community :
                 startActivity(new Intent(this,/*CommunityActivity*/MainActivity.class));
                 break;
             case R.id.bt_guide :
-                startActivity(new Intent(this,/*GuideActivity*/MainActivity.class));
+                startActivity(new Intent(this, GuideActivity.class));
                 break;
             case R.id.bt_log_out :
-                startActivity(new Intent(this,MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
         }
     }

@@ -19,7 +19,7 @@ public class CityListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_list);
-        service = (CityService) new CityServiceImpl(this.getApplicationContext());
+        service = new CityServiceImpl(this.getApplicationContext());
         ArrayList<CityBean> list = service.list();
         lv_Citylist = (ListView) findViewById(R.id.lv_Citylist);
         lv_Citylist.setAdapter(new CityAdapter(this,list));
@@ -29,9 +29,8 @@ public class CityListActivity extends Activity {
                 Object o = lv_Citylist.getItemAtPosition(position);
                 CityBean City = (CityBean) o;
                 Toast.makeText(CityListActivity.this,"선택한이름:"+City.getId(),Toast.LENGTH_LONG).show();
-
                 Intent intent = new Intent(CityListActivity.this,DetailActivity.class);
-                intent.putExtra("Address",City.getAddress());
+                intent.putExtra("address",City.getAddress());
                 startActivity(intent);
 
             }

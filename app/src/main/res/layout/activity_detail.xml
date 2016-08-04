@@ -111,9 +111,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="주소 지도로 보기"
+        android:text="집 내부 전경 보기"
         android:textSize="20dp"
-        android:id="@+id/bt_map"/>
+        android:id="@+id/bt_view"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -146,5 +146,6 @@
         android:layout_marginTop="20dp"
         android:id="@+id/bt_list"
         />
+
 
 </LinearLayout>

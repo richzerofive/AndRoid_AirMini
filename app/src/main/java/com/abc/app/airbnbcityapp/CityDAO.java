@@ -90,27 +90,51 @@ public class CityDAO extends SQLiteOpenHelper {
 
     public CityBean findByAddr(String addr) {
         String sql = "select "
-                + String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
-                + String.format(" from " + TABLE_NAME + " where id = '%s' ;", addr);
+                + String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
+                + String.format("from " + TABLE_NAME + " where address = '%s' ;", addr);
         CityBean temp = null;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(sql, null);
-        if (cursor != null) {
-            Log.d("DAO FIND_BY_ADDR", "ADDR 조회 성공 !!");
-            if (cursor.moveToFirst()) {
-                temp = new CityBean();
-                temp.setAddress(cursor.getString(0));
-                temp.setExplain(cursor.getString(1));
-                temp.setHouseType(cursor.getString(2));
-                temp.setPrice(cursor.getString(3));
-                temp.setFacilities(cursor.getString(4));
-                temp.setBed(Integer.parseInt(cursor.getString(5)));
-                temp.setRoom(Integer.parseInt(cursor.getString(6)));
-            }
-
+        Cursor cursor = db.rawQuery(sql,null);
+        Log.d("DAO FIND_BY_ADDR", "ADDR 조회 성공 !!");
+        Log.d("???????????????","?????????????!!!!");
+        Log.d("???뭐야!!",addr);
+        while(cursor.moveToNext()) {
+            temp = new CityBean();
+            temp.setAddress(cursor.getString(cursor.getColumnIndex(address)));
+            temp.setExplain(cursor.getString(1));
+            temp.setPrice(cursor.getString(2));
+            temp.setFacilities(cursor.getString(3));
+            temp.setHouseType(cursor.getString(4));
+            temp.setPhoto(cursor.getString(5));
+            temp.setRoom(Integer.parseInt(cursor.getString(6)));
+            temp.setToilet(Integer.parseInt(cursor.getString(7)));
+            temp.setBed(Integer.parseInt(cursor.getString(8)));
+            temp.setCount(Integer.parseInt(cursor.getString(9)));
         }
+
         return temp;
     }
+
+    public int book(CityBean bBean) {
+        Log.d("===bookDAO진입===","123");
+        int result = 0;
+        String sql = "insert into "
+                +TABLE_NAME
+                +"("
+                +String.format("%s,%s,%s,%s) "
+                ,address, checkIn, checkOut, count)
+                +String.format("values('%s','%s','%s','%s' );"
+                ,bBean.getAddress()
+                ,bBean.getCheckIn()
+                ,bBean.getCheckOut()
+                ,bBean.getCount()
+        );
+        Log.d(bBean.getId(),"들어온값");
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(sql);
+        return result;
+    }
+
 
     public ArrayList<CityBean> list() {
         String sql = "select "

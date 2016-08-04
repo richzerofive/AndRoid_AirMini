@@ -1,6 +1,7 @@
 package com.abc.app.airbnbcityapp;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -38,7 +39,13 @@ public class CityServiceImpl implements CityService{
         return map.values().size();
     }
 
+    @Override
+    public void book(CityBean bean) {
+        dao.book(bean);
+    }
+
     public CityBean findByAddr(String id) {
+        Log.d("ID 들어오는가!?!?!?!?",id);
         return dao.findByAddr(id);
     }
 

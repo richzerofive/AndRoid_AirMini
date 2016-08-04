@@ -20,9 +20,10 @@
         <activity android:name=".CityListActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".HostingActivity" />
-        <activity android:name=".ImageActivity" >
-            </activity>
-
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".BookActivity" />
+        <activity android:name=".BookListActivity" />
+        <activity android:name=".GuideActivity"></activity>
     </application>
 
 </manifest>

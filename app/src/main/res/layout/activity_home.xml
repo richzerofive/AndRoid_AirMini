@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/main"/>
     <Button
+        android:id="@+id/bt_host_regist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bt_hosting"
-        android:text="호스팅하기"
-        android:textSize="30dp"/>
+        android:text="호스트 등록하기"
+        android:textSize="30dp"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"/>
     <Button
-        android:id="@+id/bt_list"
+        android:id="@+id/bt_host_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="호스팅목록"
-        android:textSize="30dp"/>
+        android:text="내 호스팅 현황"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
     <Button
-        android:id="@+id/bt_img"
+        android:id="@+id/bt_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="호스팅이미지로보기"
-        android:textSize="30dp"/>
+        android:text="예약하기"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/bt_book_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 예약현황"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/bt_community"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="커뮤니티"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/bt_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가이드"
+        android:background="#4c9dd9"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/bt_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:background="#e64e4e"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>

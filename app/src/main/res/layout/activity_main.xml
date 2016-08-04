@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#02a79a"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="40px"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/airbnb"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="에어비앤비에 오신 것을 환영합니다."/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Username : "
+        android:id="@+id/et_id"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password : "
+        android:id="@+id/et_pw"/>
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/signin"/>
+    <Button
+        android:id="@+id/bt_join"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/signup"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="25px"
+        android:text="회원가입을 하면 에어비앤비의 서비스 약관, 결제 서비스 약관, 개인정보 보호정책, 게스트 환불 정책, 호스트 보호 프로그램 이용약관에 동의하는 것으로 간주됩니다."/>
+</LinearLayout>

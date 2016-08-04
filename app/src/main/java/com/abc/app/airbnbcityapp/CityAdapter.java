@@ -61,7 +61,6 @@ public class CityAdapter extends BaseAdapter{
         }else{
             holder =(ViewHolder) v.getTag();
         }
-        Log.d("사진인덱스",list.get(i).getId());
         holder.ivphoto.setImageResource(imgs[i]);
         holder.tvaddr.setText(list.get(i).getId());
         holder.tvprice.setText(list.get(i).getPrice());

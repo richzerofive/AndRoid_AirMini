@@ -52,7 +52,7 @@ public class HostingActivity extends Activity implements View.OnClickListener{
                 member.setPrice(et_price.getText().toString());
                 member.setBed(Integer.parseInt(et_bed.getText().toString()));
                 service.regist(member);
-                startActivity(new Intent(this,DetailActivity.class));
+                startActivity(new Intent(this,HomeActivity.class));
                 break;
             case R.id.bt_reset:
                 startActivity(new Intent(this,CityListActivity.class));

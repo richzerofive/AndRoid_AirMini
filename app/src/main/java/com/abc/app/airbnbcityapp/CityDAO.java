@@ -63,8 +63,8 @@ public class CityDAO extends SQLiteOpenHelper{
         int result = 0;
         Log.d("======insert 진입=====","123");
         String sql = "insert into "+TABLE_NAME
-                +String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, ",address,explain,price,facilities,house_type,photo,room,toilet,bed,count)
-                +String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d', );"
+                +String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ",address,explain,price,facilities,house_type,photo,room,toilet,bed,count)
+                +String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
                 ,bean.getAddress()
                 ,bean.getExplain()
                 ,bean.getPrice()
@@ -104,7 +104,7 @@ public class CityDAO extends SQLiteOpenHelper{
     }
     public ArrayList<CityBean> list() {
         String sql = "select "
-                + String.format("%s,%s,%s,%s,%s,%s,%d,%d,%d ",address,explain,price,facilities,house_type,room,toilet,bed,count)
+                + String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s ",address,explain,price,facilities,house_type,room,toilet,bed,count)
                 + " from " + TABLE_NAME + ";";
         ArrayList<CityBean> list = new ArrayList<CityBean>();
 

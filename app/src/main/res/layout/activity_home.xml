@@ -8,7 +8,7 @@
         android:layout_height="100dp"
         android:src="@drawable/main"/>
     <Button
-        android:id="@+id/bt_host_regist"
+        android:id="@+id/bt_hosting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="호스트 등록하기"
@@ -17,7 +17,7 @@
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"/>
     <Button
-        android:id="@+id/bt_host_list"
+        android:id="@+id/bt_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="내 호스팅 현황"

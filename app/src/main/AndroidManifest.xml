@@ -17,7 +17,12 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".JoinActivity" />
-        <activity android:name="com.abc.app.airbnbcityapp.MainActivity"></activity>
+        <activity android:name=".CityListActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".HostingActivity" />
+        <activity android:name=".ImageActivity" >
+            </activity>
+
     </application>
 
 </manifest>

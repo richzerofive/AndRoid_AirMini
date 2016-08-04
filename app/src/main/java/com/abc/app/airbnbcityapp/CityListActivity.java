@@ -31,7 +31,7 @@ public class CityListActivity extends Activity {
                 Toast.makeText(CityListActivity.this,"선택한이름:"+City.getId(),Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(CityListActivity.this,DetailActivity.class);
-                intent.putExtra("id",City.getId());
+                intent.putExtra("Address",City.getAddress());
                 startActivity(intent);
 
             }

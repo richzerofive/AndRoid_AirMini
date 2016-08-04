@@ -1,7 +1,6 @@
 package com.abc.app.airbnbcityapp;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,7 +61,7 @@ public class CityAdapter extends BaseAdapter{
             holder =(ViewHolder) v.getTag();
         }
         holder.ivphoto.setImageResource(imgs[i]);
-        holder.tvaddr.setText(list.get(i).getId());
+        holder.tvaddr.setText(list.get(i).getAddress());
         holder.tvprice.setText(list.get(i).getPrice());
 
         return v;

@@ -49,6 +49,67 @@ public class MemberDAO extends SQLiteOpenHelper{
                 + PROFILE_IMG + " text);";
         db.execSQL(sql);
         Log.d("DB 테이블  생성 체크3", "================실행======여기가지 집입");
+
+        String sql2 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                , ID, PW, NAME, GENDER, EMAIL, BIRTH, PHONE, ADDRESS, INTRO, SNS, PROFILE_IMG)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');"
+                , "park"
+                , "1"
+                , "jaekwan"
+                , "male"
+                , "pakjkwan@gmail.com"
+                , "780705"
+                , "01090753070"
+                , "suwon seoul"
+                , "hi"
+                , "kakao talk"
+                , "secret"
+        );
+
+        SQLiteDatabase db2 = this.getWritableDatabase();
+        db2.execSQL(sql2);
+
+        String sql3 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                , ID, PW, NAME, GENDER, EMAIL, BIRTH, PHONE, ADDRESS, INTRO, SNS, PROFILE_IMG)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');"
+                , "hong"
+                , "1"
+                , "gildong"
+                , "male"
+                , "gildong@gmail.com"
+                , "780705"
+                , "01095403080"
+                , "suwon seoul"
+                , "hi"
+                , "kakao talk"
+                , "secret"
+        );
+
+        SQLiteDatabase db3 = this.getWritableDatabase();
+        db3.execSQL(sql3);
+
+        String sql4 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                , ID, PW, NAME, GENDER, EMAIL, BIRTH, PHONE, ADDRESS, INTRO, SNS, PROFILE_IMG)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');"
+                , "hongsam"
+                , "1"
+                , "fire"
+                , "unisex"
+                , "hongsam@gmail.com"
+                , "700705"
+                , "01000000000"
+                , "one"
+                , "hi"
+                , "kakao talk"
+                , "secret"
+        );
+
+        SQLiteDatabase db4 = this.getWritableDatabase();
+        db4.execSQL(sql4);
+
     }
 
     @Override

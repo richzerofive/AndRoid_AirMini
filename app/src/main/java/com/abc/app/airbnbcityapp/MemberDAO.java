@@ -22,6 +22,20 @@ public class MemberDAO extends SQLiteOpenHelper{
     public static final String INTRO = "intro";
     public static final String SNS = "sns";
     public static final String PROFILE_IMG = "profile_img";
+    public static final String TABLE_NAME2 = "city_member";
+    public static final String address2 = "address";
+    public static final String explain2 = "explain";
+    public static final String price2 = "price";
+    public static final String facilities2 = "facilities";
+    public static final String house_type2 = "house_type";
+    public static final String photo2 = "photo";
+    public static final String room2 = "room";
+    public static final String toilet2 = "toilet";
+    public static final String bed2 = "bed";
+    public static final String count2 = "count";
+    public static final String id2 = "id";
+    public static final String checkIn2 = "checkIn";
+    public static final String checkOut2 = "checkOut";
 
     public MemberDAO(Context context) {
         super(context, "hanbit", null, 1);
@@ -67,8 +81,8 @@ public class MemberDAO extends SQLiteOpenHelper{
                 , "secret"
         );
 
-        SQLiteDatabase db2 = this.getWritableDatabase();
-        db2.execSQL(sql2);
+
+        db.execSQL(sql2);
 
         String sql3 = "insert into " + TABLE_NAME
                 + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
@@ -87,8 +101,8 @@ public class MemberDAO extends SQLiteOpenHelper{
                 , "secret"
         );
 
-        SQLiteDatabase db3 = this.getWritableDatabase();
-        db3.execSQL(sql3);
+
+        db.execSQL(sql3);
 
         String sql4 = "insert into " + TABLE_NAME
                 + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
@@ -107,8 +121,94 @@ public class MemberDAO extends SQLiteOpenHelper{
                 , "secret"
         );
 
-        SQLiteDatabase db4 = this.getWritableDatabase();
-        db4.execSQL(sql4);
+
+        db.execSQL(sql4);
+        Log.d("===onCreate진입====","123");
+
+
+        String sql5 = "create table if not exists "
+                + TABLE_NAME2
+                + " ( "
+                + address2 + " text primary key, "
+                + explain2 + " text, "
+                + price2 + " text, "
+                + facilities2 + " text, "
+                + house_type2 + " text, "
+                + photo2 + " text, "
+                + room2 + " integer, "
+                + toilet2 + " integer, "
+                + bed2 + " integer, "
+                + count2 + " integer, "
+                + id2 + " text, "
+                + checkIn2 + " text, "
+                + checkOut2 + " text );";
+
+
+        db.execSQL(sql5);
+        Log.d("DB 생성 table 체크", "======================여기가지 집입");
+
+        sql2 = "insert into " + TABLE_NAME2
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address2, explain2, price2, facilities2, house_type2, photo2, room2, toilet2, bed2, count2)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' );"
+                , "seoul sinchon hanbit class2"
+                , "class"
+                , "$10"
+                , "computer"
+                , "class"
+                , "default"
+                , "1"
+                , "1"
+                , "3"
+                , "15");
+
+        db.execSQL(sql2);
+
+        sql3 = "insert into " + TABLE_NAME2
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address2, explain2, price2, facilities2, house_type2, photo2, room2, toilet2, bed2, count2)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' );"
+                , "3 Pyrmont St, Pyrmont NSW 2009 AUS"
+                , "share house"
+                , "$210"
+                , "strong vecuum"
+                , "detached"
+                , "no more"
+                , "4"
+                , "1"
+                , "2"
+                , "8");
+
+        db.execSQL(sql3);
+
+        sql4 = "insert into " + TABLE_NAME2
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address2, explain2, price2, facilities2, house_type2, photo2, room2, toilet2, bed2, count2)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' );"
+                , "424-458 Hoxton Park Rd Liverpool  NSW 2009 AUS"
+                , "hotel"
+                , "$1000"
+                , "gym pool bar etc"
+                , "hotel"
+                , "default"
+                , "100"
+                , "100"
+                , "300"
+                , "400");
+
+        db.execSQL(sql4);
+
+        sql5 = "insert into " + TABLE_NAME2
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address2, explain2, price2, facilities2, house_type2, photo2, room2, toilet2, bed2, count2)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s' );"
+                , "1600 Pennsylvania Ave NW, Washington, DC 20500"
+                , "obama house"
+                , "free"
+                , "security guard"
+                , "white house"
+                , "secret"
+                , "10"
+                , "10"
+                , "10"
+                , "20");
+        db.execSQL(sql5);
 
     }
 

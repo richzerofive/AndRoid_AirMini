@@ -32,12 +32,13 @@ public class BookActivity extends Activity  implements View.OnClickListener{
         switch (v.getId()){
             case R.id.bt_booking:
                 CityBean bean = new CityBean();
+                bean.setAddress(et_address.getText().toString());
                 bean.setCheckIn(et_check_in.getText().toString());
                 bean.setCheckOut(et_check_out.getText().toString());
                 bean.setCount(Integer.parseInt(et_count.getText().toString()));
-                bean.setAddress(et_address.getText().toString());
-                service.regist(bean);
-                startActivity(new Intent(this,BookListActivity.class));
+
+                service.book(bean);
+                startActivity(new Intent(this,HomeActivity.class));
                 break;
             case R.id.bt_reset:
                 startActivity(new Intent(this,HomeActivity.class));

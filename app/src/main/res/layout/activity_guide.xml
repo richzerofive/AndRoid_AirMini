@@ -7,11 +7,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".GuideActivity">
+    tools:context=".GuideActivity"
+    android:background="#02a79a">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:orientation="vertical">
 
         <LinearLayout
@@ -26,7 +28,9 @@
                 android:layout_weight="1"
                 android:text="PREVIOUS"
                 android:textSize="12sp"
-                android:onClick="mOnClick"/>
+                android:onClick="mOnClick"
+                android:background="#454242"
+                android:textColor="#ffffff"/>
 
             <Button android:id="@+id/btn_next"
                 android:layout_width="0dp"
@@ -34,7 +38,9 @@
                 android:layout_weight="1"
                 android:text="Next"
                 android:textSize="12sp"
-                android:onClick="mOnClick"/>
+                android:onClick="mOnClick"
+                android:background="#454242"
+                android:textColor="#ffffff"/>
 
         </LinearLayout>
 

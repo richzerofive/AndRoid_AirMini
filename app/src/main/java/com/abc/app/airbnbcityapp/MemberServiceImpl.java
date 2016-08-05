@@ -34,6 +34,9 @@ public class MemberServiceImpl implements MemberService{
         return msg;
     }
 
+    public MemberBean getSession() {
+        return session;
+    }
 
     @Override
     public void update(MemberBean mem) {
@@ -59,8 +62,12 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public boolean login(MemberBean member) {
-        return dao.login(member);
+            if (dao.login(member)) {
+            session = dao.findById(member);
+        }
+        return true;
     }
+
 
     @Override
     public void logout(MemberBean member) {

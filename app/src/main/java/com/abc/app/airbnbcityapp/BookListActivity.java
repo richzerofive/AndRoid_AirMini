@@ -67,12 +67,7 @@ public class BookListActivity extends Activity{
                 "cupcake",
                 "donut",
                 "eclair",
-                "froyo",
-                "honeycomb",
-                "icecream",
-                "jellybean",
-                "kitkat",
-                "lollipop"
+
         };
         int i = 0;
         while (i<names.length) {

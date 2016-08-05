@@ -2,12 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#02a79a">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="호스팅상세정보"
+        android:text="호스팅 상세정보"
         android:gravity="center_horizontal"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:textSize="30dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +20,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="주소:"/>
         <TextView
             android:layout_width="match_parent"
@@ -31,6 +35,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="가격:"/>
         <TextView
             android:layout_width="match_parent"
@@ -45,6 +50,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="집 유형:"/>
         <TextView
             android:layout_width="match_parent"
@@ -59,6 +65,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="방갯수:"/>
         <TextView
             android:layout_width="match_parent"
@@ -73,6 +80,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="화장실갯수:"/>
         <TextView
             android:layout_width="match_parent"
@@ -87,6 +95,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="침대갯수:"/>
         <TextView
             android:layout_width="match_parent"
@@ -101,6 +110,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:textColor="#ffffff"
             android:text="설비"/>
         <TextView
             android:layout_width="match_parent"
@@ -113,36 +123,48 @@
         android:layout_height="wrap_content"
         android:text="집 내부 전경 보기"
         android:textSize="20dp"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:id="@+id/bt_view"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="호스트에게전화걸기"
         android:textSize="20dp"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:id="@+id/bt_call"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="호스트 이메일 전송"
         android:textSize="20dp"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:id="@+id/bt_email"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="호스트 메세지 전송"
         android:textSize="20dp"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:id="@+id/bt_msg"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="페이스북 글쓰기"
         android:textSize="20dp"
+        android:background="#454242"
+        android:textColor="#ffffff"
         android:id="@+id/bt_facebook"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="목록으로 돌아가기"
+        android:text="다른 호스트들을 관찰하기"
         android:textSize="20dp"
+        android:background="#008c81"
+        android:textColor="#ffffff"
         android:layout_marginTop="20dp"
         android:id="@+id/bt_list"
         />

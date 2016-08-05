@@ -15,5 +15,6 @@ public interface MemberService {
     public int count();
     public List<MemberBean> list();
     public MemberBean show();
+    public MemberBean getSession();
     public List<MemberBean> findBy(String keyword);
 }

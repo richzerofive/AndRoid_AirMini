@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class DetailActivity extends Activity implements View.OnClickListener{
     CityService service;
     TextView tv_addr,tv_price,tv_form,tv_rooms,tv_toil,tv_bed,tv_facil;
-    Button bt_view;
+    Button bt_view, bt_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,8 @@ public class DetailActivity extends Activity implements View.OnClickListener{
         tv_bed.setText(String.valueOf(member.getBed()));
         tv_facil = (TextView) findViewById(R.id.tv_facil);
         tv_facil.setText(member.getFacilities());
+        bt_list = (Button) findViewById(R.id.bt_list);
+        bt_list.setOnClickListener(this);
         bt_view = (Button) findViewById(R.id.bt_view);
         bt_view.setOnClickListener(this);
     }
@@ -43,6 +45,9 @@ public class DetailActivity extends Activity implements View.OnClickListener{
         switch (v.getId()){
             case R.id.bt_view:
                 startActivity(new Intent(this,ImageActivity.class));
+                break;
+            case R.id.bt_list:
+                startActivity(new Intent(this,CityListActivity.class));
                 break;
         }
     }

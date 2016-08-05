@@ -17,5 +17,4 @@ public interface CityService {
     public void book(CityBean bean);
     public ArrayList<CityBean> list();
     public List<CityBean> findBy(String word);
-
 }

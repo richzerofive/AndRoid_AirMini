@@ -218,6 +218,7 @@ public class MemberDAO extends SQLiteOpenHelper{
     }
 
     public int regist(MemberBean mBean) {
+
         int result = 0;
         String sql = "insert into " + TABLE_NAME
                 + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
@@ -242,8 +243,7 @@ public class MemberDAO extends SQLiteOpenHelper{
     }
     public MemberBean findById(MemberBean mBean) {
         MemberBean temp=null;
-        String sql = "select * from "+TABLE_NAME+String.format("where id = '%s';",mBean.getId());
-
+        String sql = "select * from "+TABLE_NAME+String.format(" where id = '%s';",mBean.getId());
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cursor= db.rawQuery(sql,null);
         return temp;

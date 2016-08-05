@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * Created by hb2003 on 2016-08-03.
  */
 public class CityDAO extends SQLiteOpenHelper {
+    private MemberService service2;
     public static final String TABLE_NAME = "city_member";
     public static final String address = "address";
     public static final String explain = "explain";
@@ -95,21 +96,26 @@ public class CityDAO extends SQLiteOpenHelper {
         return temp;
     }
 
-    public int book(CityBean bBean) {
+    public int book(CityBean bean) {
         Log.d("===bookDAO진입===","123");
         int result = 0;
-        String sql = "insert into "
-                +TABLE_NAME
-                +"("
-                +String.format("%s,%s,%s,%s) "
-                ,address, checkIn, checkOut, count)
-                +String.format("values('%s','%s','%s','%s' );"
-                ,bBean.getAddress()
-                ,bBean.getCheckIn()
-                ,bBean.getCheckOut()
-                ,bBean.getCount()
+        String sql = "update " + TABLE_NAME
+                +String.format(" set address = '%s', explain = '%s', price = '%s', facilities = '%s', house_type = '%s', photo = '%s'" +
+                ", room = '%d', toilet = '%d', bed = '%d', checkIn = '%s', checkOut = '%s', count = '%d' where address = '%s';"
+                , bean.getAddress()
+                , bean.getExplain()
+                , bean.getPrice()
+                , bean.getFacilities()
+                , bean.getHouseType()
+                , "default"
+                , bean.getRoom()
+                , bean.getToilet()
+                , bean.getBed()
+                , bean.getCheckIn()
+                , bean.getCheckOut()
+                , bean.getCount()
+                , bean.getAddress()
         );
-        Log.d(bBean.getId(),"들어온값");
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL(sql);
         return result;

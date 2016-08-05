@@ -20,10 +20,11 @@ public class CityAdapter extends BaseAdapter{
             R.drawable.host13,
             R.drawable.host14,
             R.drawable.host17,
-            R.drawable.host18,
-            R.drawable.host19,
-            R.drawable.host20l,
-            R.drawable.host12
+            R.drawable.host15,
+            R.drawable.host15,
+            R.drawable.host15,
+            R.drawable.host16,
+
     };
 
     public CityAdapter(Context context, ArrayList<CityBean>list) {

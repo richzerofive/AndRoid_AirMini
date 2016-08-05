@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.abc.app.airbnbcityapp.ImageActivity">
+    tools:context="com.abc.app.airbnbcityapp.ImageActivity"
+    android:background="#02a79a">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

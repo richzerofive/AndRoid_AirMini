@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#454242"
+    android:background="#02a79a"
     >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="예  약"
+        android:text="지금 당장 떠날 준비를 하세요!"
         android:gravity="center_horizontal"
         android:background="#454242"
         android:textColor="#ffffff"
-        android:textSize="50dp"/>
+        android:textSize="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:text="예약"
         android:textSize="20dp"
-        android:background="#454242"
+        android:background="#008c81"
         android:textColor="#ffffff"
         android:id="@+id/bt_booking"
 
@@ -108,11 +108,11 @@
         android:layout_height="wrap_content"
         android:text="취소"
         android:textSize="20dp"
-        android:background="#454242"
+        android:background="#008c81"
         android:textColor="#ffffff"
         android:id="@+id/bt_reset"/>
     <ImageView
         android:layout_width="400dp"
         android:layout_height="250dp"
-        android:src="@drawable/book"/>
+        android:src="@drawable/nombani"/>
 </LinearLayout>

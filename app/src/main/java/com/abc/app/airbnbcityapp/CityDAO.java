@@ -71,7 +71,55 @@ public class CityDAO extends SQLiteOpenHelper {
                 , "3"
                 , "15");
         SQLiteDatabase db2 = this.getWritableDatabase();
-        db.execSQL(sql);
+        db.execSQL(sql2);
+
+        String sql3 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
+                , "3 Pyrmont St, Pyrmont NSW 2009 AUS"
+                , "share house"
+                , "$210"
+                , "strong vecuum"
+                , "detached"
+                , "no more"
+                , "4"
+                , "1"
+                , "2"
+                , "8");
+        SQLiteDatabase db3 = this.getWritableDatabase();
+        db.execSQL(sql3);
+
+        String sql4 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
+                , "424-458 Hoxton Park Rd Liverpool  NSW 2009 AUS"
+                , "hotel"
+                , "$1000"
+                , "gym pool bar etc"
+                , "hotel"
+                , "default"
+                , "100"
+                , "100"
+                , "300"
+                , "400");
+        SQLiteDatabase db4 = this.getWritableDatabase();
+        db.execSQL(sql4);
+
+        String sql5 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
+                , "1600 Pennsylvania Ave NW, Washington, DC 20500"
+                , "obama house"
+                , "free"
+                , "security guard"
+                , "white house"
+                , "secret"
+                , "10"
+                , "10"
+                , "10"
+                , "20");
+        SQLiteDatabase db5 = this.getWritableDatabase();
+        db.execSQL(sql5);
     }
 
 

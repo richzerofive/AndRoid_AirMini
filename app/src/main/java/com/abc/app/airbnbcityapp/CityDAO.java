@@ -56,6 +56,22 @@ public class CityDAO extends SQLiteOpenHelper {
 
         db.execSQL(sql);
         Log.d("DB 생성 table 체크", "======================여기가지 집입");
+
+        String sql2 = "insert into " + TABLE_NAME
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ", address, explain, price, facilities, house_type, photo, room, toilet, bed, count)
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%d','%d','%d','%d' );"
+                , "seoul sinchon hanbit class2"
+                , "class"
+                , "$10"
+                , "computer"
+                , "class"
+                , "default"
+                , "1"
+                , "1"
+                , "3"
+                , "15");
+        SQLiteDatabase db2 = this.getWritableDatabase();
+        db.execSQL(sql);
     }
 
 
